@@ -141,63 +141,6 @@ body {
   border-radius: 6px;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-  .header {
-    padding: 20px 30px;
-  }
-
-  .home {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 30px;
-  }
-
-  .home-content {
-    max-width: 100%;
-  }
-
-  .home-image {
-    margin-top: 40px;
-  }
-
-  .name {
-    font-size: 42px;
-  }
-
-  .role::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .navbar {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    padding: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar a {
-    margin: 12px 0;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .navbar.show {
-    display: flex;
-  }
-}
-/* Project Section */
-
-/* ================= PROJECTS SECTION ================= */
-
 /* ================= PROJECTS SECTION ================= */
 
 .projects {
@@ -326,8 +269,59 @@ body {
   color: #fff;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-image {
+    margin-top: 40px;
+  }
+
+  .name {
+    font-size: 42px;
+  }
+
+  .role::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar a {
+    margin: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
   .project-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -346,6 +340,3 @@ body {
     height: 200px;
   }
 }
-/* ================= PROJECTS SECTION ================= */
-
-/* ================= PROJECTS SECTION ================= */
