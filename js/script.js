@@ -46,14 +46,12 @@ const projectCards = document.querySelectorAll(".project-card");
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
 
-    // Remove active class from all buttons
+    // Remove active class
     filterButtons.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
 
-    // Get filter value
     const filterValue = button.getAttribute("data-filter");
 
-    // Show / hide cards
     projectCards.forEach(card => {
       if (card.classList.contains(filterValue)) {
         card.style.display = "block";
@@ -64,7 +62,7 @@ filterButtons.forEach(button => {
   });
 });
 
-// Default show Power BI on load
+// Default: Show PowerBI first
 window.addEventListener("load", () => {
   projectCards.forEach(card => {
     if (card.classList.contains("powerbi")) {
@@ -74,5 +72,5 @@ window.addEventListener("load", () => {
     }
   });
 });
-// Project section
+
 
