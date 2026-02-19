@@ -19,39 +19,21 @@ navLinks.forEach(link => {
   });
 });
 
-// ACTIVE LINK CHANGE ON SCROLL
-window.addEventListener("scroll", () => {
-  let scrollPosition = window.scrollY;
-
-  navLinks.forEach(link => {
-    const section = document.querySelector(link.getAttribute("href"));
-
-    if (section) {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        navLinks.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      }
-    }
-  });
-});
-// HOME SECTION
-// ================= PROJECT FILTER SYSTEM =================
-
+// PROJECT FILTER SYSTEM
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
 
-    // Remove active class
+    // Remove active class from all buttons
     filterButtons.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
 
+    // Get filter value
     const filterValue = button.getAttribute("data-filter");
 
+    // Show/Hide cards
     projectCards.forEach(card => {
       if (card.classList.contains(filterValue)) {
         card.style.display = "block";
@@ -62,7 +44,7 @@ filterButtons.forEach(button => {
   });
 });
 
-// Default: Show PowerBI first
+// Default show Power BI projects only
 window.addEventListener("load", () => {
   projectCards.forEach(card => {
     if (card.classList.contains("powerbi")) {
@@ -72,5 +54,3 @@ window.addEventListener("load", () => {
     }
   });
 });
-
-
