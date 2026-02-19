@@ -38,3 +38,41 @@ window.addEventListener("scroll", () => {
   });
 });
 // HOME SECTION
+// ================= PROJECT FILTER SYSTEM =================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    // Get filter value
+    const filterValue = button.getAttribute("data-filter");
+
+    // Show / hide cards
+    projectCards.forEach(card => {
+      if (card.classList.contains(filterValue)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
+// Default show Power BI on load
+window.addEventListener("load", () => {
+  projectCards.forEach(card => {
+    if (card.classList.contains("powerbi")) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+// Project section
+
