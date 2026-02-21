@@ -54,3 +54,22 @@ window.addEventListener("load", () => {
     }
   });
 });
+// DASHBOARD VIEW MODAL
+const viewButtons = document.querySelectorAll(".view-btn");
+const modal = document.getElementById("dashboardModal");
+const modalImg = document.getElementById("modalImage");
+
+viewButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const imgSrc = button.getAttribute("data-img");
+    modalImg.src = imgSrc;
+    modal.classList.add("active");
+  });
+});
+
+// Close modal when clicking outside image
+modal.addEventListener("click", (e) => {
+  if (e.target !== modalImg) {
+    modal.classList.remove("active");
+  }
+});
